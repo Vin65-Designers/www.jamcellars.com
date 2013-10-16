@@ -11,46 +11,31 @@
 	ul{
 		list-style: none;
 		margin: 0;
-		float: right;
 		padding: 0;
 		position: relative;
-	}
-
-	li{
-		float: left;
-		margin: 0 0 0 55px;
-		padding: 0;
-		position: relative;
-
-		a{
-			color: $headerFontColor;
-			display: inline-block;
-			height: 32px;
-			line-height: 32px;
-			margin: 0;
-			padding: 0;
-			position: relative;
-			text-decoration: none;
-
-			&:hover{
-				color: $headerFontColorHover;
-				text-decoration: none;
-			}
-		}
-
-		// Drop Down
-		&:hover ul{
-			border: 1px solid #ccc;
-			display: block;
-			font-size: 12px;
-		}
+		text-align: right;
 
 		ul{
+			border: 1px solid $grey-light;
+			background: $white;
 			display: none;
+			font-size: 12px;
 			left: -10px;
 			position: absolute;
 			top: 32px;
 			width: 180px;
+		}
+	}
+
+	li{
+		display: inline-block;
+		margin: 0 0 0 50px;
+		padding: 0;
+		position: relative;
+
+		// Drop Down
+		&:hover ul{
+			display: block;
 		}
 
 		li{
@@ -61,10 +46,8 @@
 			width: 180px;
 
 			a{
-				background-color: #fff;
-				color: #666;
+				color: $grey;
 				display: block;
-				float: none;
 				height: 28px;
 				line-height: 28px;
 				margin: 0;
@@ -74,9 +57,25 @@
 				width: 170px;
 
 				&:hover{
-					color: #000;
+					color: $black;
 				}
 			}
+		}
+	}
+
+	a{
+		color: $headerFontColor;
+		display: inline-block;
+		height: 32px;
+		line-height: 32px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		text-decoration: none;
+
+		&:hover{
+			color: $headerFontColorHover;
+			text-decoration: none;
 		}
 	}
 
@@ -94,39 +93,38 @@
 
 /* ----- b. Sub Menu ----- */
 .subMenu{
-	border-right: 1px solid #ccc;
+	border-right: 1px solid $grey-light;
 	float: left;
-	margin: 60px 40px 0 0;
-	padding-right: 20px;
-	width: 170px;
+	margin: 6% 4% 0 0;
+	padding-right: 2%;
+	width: 17.5%;
 
 	ul{
-		font-size: 11px;
 		list-style: none;
-		margin: 0 0 1em 10px;
+		margin: 0 0 2%;
 		padding: 0;
-		width: 160px;
 	}
 
 	li{
-		line-height: 2;
-
-		a{
-			&:hover{}
-		}
+		line-height: 3;
 
 		ul{
 			margin-left: 10px;
-			width: 160px;
 		}
 	}
 
+	a{
+		display: inline-block;
+		line-height: 1.5;
+		width: 100%;
+	}
+
 	.v65-pageAParent {
-		color: #000;
+		color: $black;
 	}
 
 	.v65-leftSelected{
-		color: #000;
+		color: $black;
 		font-weight: bold;
 	}
 
