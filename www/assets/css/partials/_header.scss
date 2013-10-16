@@ -1,10 +1,14 @@
-.header{
+header.primary{
 	height:180px;
 	margin-bottom: 1em;
 	position: relative;
 	width: 100%;
-	z-index: 100;
+	z-index: 10;
 }
+
+	#user-tools a {
+		color: $headerFontColor;
+	}
 
 	.logo{
 		background: image-url('logo.png') top left no-repeat;
@@ -13,8 +17,4 @@
 		height: 140px;
 		margin-bottom: 0;
 		width: 260px;
-	}
-
-	#user-tools a {
-		color: $headerFontColor;
 	}
