@@ -1,29 +1,14 @@
-.hideText{
-	overflow:hidden;
-	text-indent:100%;
-	white-space:nowrap;
-	
-	a{
-		display:block;
-		height:100%;
-	}
-}
-
-
-.wrapper{
-	margin: 0 auto;
-	position: relative;
-	width: $websiteWidth;
-}
-
 .content{
 	background: #fff;
 	box-shadow: 0 0 20px $boxShadowColor;
 }
 
+	.pageContent{
+		padding: 3em;
+	}
+
 /* ----- a. Homepage Styles ----- */
 @import 'content_home';
 
 /* ----- b. Page Styles ----- */
-
 @import 'content_page';
