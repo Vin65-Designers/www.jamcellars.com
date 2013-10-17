@@ -39,43 +39,34 @@
 		</nav>
 	</header>
 	
-	<div class="content v65-group">
-		
-		<div class="backtotop">	
-			<a href="#"><i class="icon-up-bold"></i>TOP</a>
-		</div>
+	<section class="content pageContent v65-group">
+		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
 
 		<div class="blogContent">
 			<v65:mainContent></v65:mainContent>
 		</div><!--/blogContent-->
 		
-		<aside class="blogRightWrapper">
-
-			<div class="blogFilterLeft">
+		<aside class="blogFilterWrapper">
+			<div class="blogFilter blogFilterLeft">
 				<h5>Recent Posts</h5>
 				<v65:blogRecentPosts maxrows="10"></v65:blogRecentPosts>
 
 				<h5>Blog Categories</h5>
 				<v65:blogCategories></v65:blogCategories>
-
 			</div>
 
-			<div class="blogFilterRight">
-
+			<div class="blogFilter blogFilterRight">
 				<h5>Our Writers</h5>
 				<v65:blogAuthors></v65:blogAuthors>
 
 				<h5>Blog Archives</h5>
 				<v65:blogArchives></v65:blogArchives>
-
 			</div>
+		</aside><!--/blogRightWrapper-->
+	</section><!--/content-->
 
-		</aside><!--/blogRightWrapper-->	
-		
-	</div><!--/content-->
-	
 	<footer>
-		<a name="footerNav"></a> 
+		<a name="footerNav"></a>
 
 		<nav class="footerNav">
 			<v65:layoutFooterNav></v65:layoutFooterNav>
@@ -85,8 +76,8 @@
 			<v65:contentBlock group="Footer Contact Details"></v65:contentBlock>
 			
 			<ul class="legal">
-				<v65:copyright></v65:copyright><br>
-				<v65:vin65Accolade></v65:vin65Accolade>
+				<li><v65:copyright></v65:copyright></li>
+				<li><v65:vin65Accolade></v65:vin65Accolade></li>
 			</ul>
 		</div><!--/footerTools-->
 	</footer>
