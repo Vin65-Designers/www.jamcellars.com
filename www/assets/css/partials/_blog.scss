@@ -1,17 +1,29 @@
 .blogContent{
-	float: left;
-	padding: 20px 25px 0 0;
-	width: 520px;
+	@media screen and (min-width: 581px){
+		float: left;
+		width: 75%;
+	}
+
+	@media screen and (min-width: 768px){
+		padding: 4% 4% 0 0;
+		width: 56%;
+	}
 }
 
-.blogRightWrapper {
-	float: right;
-	padding-top: 20px;
-	width: 325px;
+.blogFilterWrapper {
+
+	@media screen and (min-width: 581px){
+		float: right;
+		width: 20%;
+	}
+
+	@media screen and (min-width: 768px){
+		padding-top: 4%;
+		width: 40%;
+	}
 
 	ul{
 		list-style: none;
-		margin: 0 0 1em;
 		padding: 0;
 	}
 
@@ -21,13 +33,16 @@
 	}
 }
 
-	.blogFilterLeft {
-		float: left;
-		padding: 0 25px 0 0;
-		width: 150px;
+	.blogFilter{
+		@media screen and (max-width: 580px), (min-width: 768px){
+			float: left;
+			width: 48%;
+		}
 	}
 
-	.blogFilterRight {
-		float: left;
-		width: 150px;
+	.blogFilterLeft {
+		@media screen and (max-width: 580px), (min-width: 768px){
+
+			padding-right: 4%;
+		}
 	}
