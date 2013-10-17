@@ -8,7 +8,10 @@ body{
 	font-family: $fontFamily;
 	max-width: 990px;
 	margin: 0 auto;
-	width: 100%;
+
+	@media screen and (min-width: 581px) and (max-width: 1030px){
+		padding: 0 10px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,26 +127,6 @@ hr {
 	height: 1px;
 }
 
-// .backtotop {
-// 	display: none;
-
-// 	@media screen and (max-width : 680px) {
-// 		position: fixed;
-// 		bottom: 1em;
-// 		right: 1em;
-// 		z-index: 900;
-
-// 		a {
-// 			color: $backtoTopColor;
-// 			background: $backtoTopBackground;
-// 			border: 1px solid $backtoTopBorder;
-// 			border-radius: 50%;
-// 			display: block;
-// 			line-height: 5em;
-// 			height: 5em;
-// 			width: 5em;
-// 			text-align: center;
-// 			text-decoration: none;
-// 		}
-// 	}
-// }
+a[name=footerNav]{
+	display: none !important;
+}
