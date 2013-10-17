@@ -1,20 +1,43 @@
 header.primary{
-	height:180px;
 	margin-bottom: 1em;
 	position: relative;
 	width: 100%;
 	z-index: 10;
 }
 
-	#user-tools a {
-		color: $headerFontColor;
+	#user-tools {
+		@media screen and (max-width: 580px){
+			border-bottom: 1px solid $black;
+		}
+
+		a {
+			color: $headerFontColor;
+		}
 	}
 
 	.logo{
-		background: image-url('logo.png') top left no-repeat;
+		background:{
+			image: image-url('logo.png');
+			position: top center;
+			repeat: no-repeat;
+		}
+		background-size: contain;
 		display: block;
-		float: left;
 		height: 140px;
-		margin-bottom: 0;
+		position: relative;
 		width: 260px;
+
+		@media screen and (-webkit-min-device-pixel-ratio: 1.5),	(min-device-pixel-ratio: 1.5){
+			background-image: image-url('logo@2x.png');
+		}
+		
+		@media screen and (max-width: 767px){
+			clear: both;
+			margin: 0.5em auto 0;
+		}
+
+		@media screen and (min-width: 768px){
+			float: left;
+			margin-bottom: 0;
+		}
 	}
