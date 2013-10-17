@@ -1,7 +1,15 @@
 ﻿var v65 = {
 	global : {
+		init : function(){
+			v65.global.addButtonListener();
+			v65.global.mainMenuHover();
+		},
+		addButtonListener : function(){
+			if(document.addEventListener){
+				document.addEventListener("touchstart", function(){}, true);
+			}
+		},
 		mainMenuHover : function(){
-			$(".mainMenu ul li:last-child").css("margin-right", "0");
 			$(".mainMenu ul li ul li").hover(function(){
 				$(this).parent().parent().children("a").toggleClass("hover");
 			});
@@ -11,14 +19,16 @@
 		initPhotoGallery : function(){
 			if($("#slider").length){
 				$("#slider").v65PhotoGallery({
-					galleryHeight : 350, // This changes the height of the homepage photogallery
-					galleryWidth : null, // This changes the width of the homepage photogallery
-					galleryId : "964891e4-a231-7b8c-5b46-2cc64a607476"	//	This is where you add the homepage photogallery id
+					galleryId : "964891e4-a231-7b8c-5b46-2cc64a607476"
 				});
 			}
 		}
 	},
 	page : {
+		init : function(){
+			v65.page.initPhotoGallery();
+			v65.page.scrollToTop();
+		},
 		initPhotoGallery : function(){
 			if($("#pagePhotoGallery").length){
 				$("#pagePhotoGallery").v65PhotoGallery({
@@ -34,6 +44,25 @@
 					*/
 				});
 			}
+		},
+		scrollToTop : function(){
+			$(window).scroll(function() {
+				if($(document).scrollTop() > 150 && $(window).width() < 580){
+					$(".backToTop").css("display", "block");
+					$('.v65-productAddToCart-drilldown').addClass('v65-productAddToCart-drilldownActivate');
+					$("footer").css("margin-bottom", $('.v65-productAddToCart-drilldownActivate').outerHeight())
+
+				} else{
+					$(".backToTop").css("display", "none");
+					$('.v65-productAddToCart-drilldown').removeClass('v65-productAddToCart-drilldownActivate');
+					$("footer").removeAttr('style');
+				}
+			});
+
+			$('.backToTop').click(function() {
+				$("html, body").animate({ scrollTop: 0 }, 400);
+				return false;
+			});
 		}
 	}
 }
@@ -96,6 +125,6 @@
 	}
 })(jQuery);
 
-v65.global.mainMenuHover();
+v65.global.init();
 v65.home.initPhotoGallery();
-v65.page.initPhotoGallery();
+v65.page.init();
