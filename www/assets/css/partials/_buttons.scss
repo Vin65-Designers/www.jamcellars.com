@@ -15,6 +15,8 @@ button {
 		
 		span{
 			background: none;
+			height: auto;
+			line-height: inherit;
 		}
 
 		&:hover, &:active{
@@ -35,6 +37,8 @@ button {
 		
 		span{
 			background: none;
+			height: auto;
+			line-height: inherit;
 		}
 
 		&:hover, &:active{
@@ -47,6 +51,8 @@ button {
 a{
 	span{
 		padding: 0 1em;
+		height: auto;
+		line-height: inherit;
 	}
 	
 	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn, &.fullWidthBtn{
@@ -61,6 +67,8 @@ a{
 		
 		span{
 			background: none;
+			height: auto;
+			line-height: inherit;
 		}
 
 		&:hover, &:active{
@@ -80,6 +88,8 @@ a{
 		
 		span{
 			background: none;
+			height: auto;
+			line-height: inherit;
 		}
 
 		&:hover, &:active{
