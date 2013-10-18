@@ -27,6 +27,7 @@
 	page : {
 		init : function(){
 			v65.page.initPhotoGallery();
+			v65.page.scrollToBottom();
 			v65.page.scrollToTop();
 		},
 		initPhotoGallery : function(){
@@ -44,6 +45,12 @@
 					*/
 				});
 			}
+		},
+		scrollToBottom : function(){
+			$('.footerMenuLink').click(function() {
+				$("html, body").animate({ scrollTop: $(document).height() }, 400);
+				return false;
+			});
 		},
 		scrollToTop : function(){
 			$(window).scroll(function() {
