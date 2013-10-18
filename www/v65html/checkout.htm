@@ -33,37 +33,18 @@
 		<h1 class="logo hideText">
 			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
 		</h1>
-		
-		<nav class="mainMenu">
-			<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
-			<a href="#footerMenu" class="footerMenuLink"><i class="icon-menu"></i></a>
-		</nav>
 	</header>
 
-	<section class="content homepageContent v65-group">
+	<article class="content pageContent v65-group">		
 		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
-		
-		<div id="slider"></div>
-				
-		<article class="homepageText">
-			<v65:mainContent></v65:mainContent>
-		</article>
-		
-		<div class="homepageProductGroup">
-			<v65:product:group code="HomepageProductGroup"></v65:product:group>
-		</div>
-	</section><!--/homepageContent-->
+
+		<v65:mainContent></v65:mainContent>
+	</article><!--/contentWide-->
 	
 	<footer>
 		<a name="footerMenu"></a>
 
-		<nav>
-			<v65:layoutFooterNav></v65:layoutFooterNav>
-		</nav>
-
-		<div class="footerTools"> 
-			<v65:contentBlock group="Footer Contact Details"></v65:contentBlock>
-			
+		<div class="footerTools"> 			
 			<ul class="legal">
 				<li><v65:copyright></v65:copyright></li>
 				<li><v65:vin65Accolade></v65:vin65Accolade></li>
