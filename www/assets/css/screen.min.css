@@ -17,10 +17,6 @@
 	6. Print
 	7. Buttons
 	8. Footer
-	9. Vin65 Overrides
-		a. User Tools
-		b. Homepage Product Group
-		c. Checkout Overrides
 */
 /* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -400,6 +396,174 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?96886464");
+  src: url("../font/fontello.eot?96886464#iefix") format("embedded-opentype"), url("../font/fontello.woff?96886464") format("woff"), url("../font/fontello.ttf?96886464") format("truetype"), url("../font/fontello.svg?96886464#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?96886464#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-youtube:before {
+  content: '\55';
+}
+
+/* 'U' */
+.icon-acrobat:before {
+  content: '\e3';
+}
+
+/* 'ã' */
+.icon-home:before {
+  content: '\2302';
+}
+
+/* '⌂' */
+.icon-star:before {
+  content: '\2605';
+}
+
+/* '★' */
+.icon-star-empty:before {
+  content: '\2606';
+}
+
+/* '☆' */
+.icon-menu:before {
+  content: '\2630';
+}
+
+/* '☰' */
+.icon-heart-empty:before {
+  content: '\2661';
+}
+
+/* '♡' */
+.icon-heart:before {
+  content: '\2665';
+}
+
+/* '♥' */
+.icon-layout:before {
+  content: '\268f';
+}
+
+/* '⚏' */
+.icon-mail:before {
+  content: '\2709';
+}
+
+/* '✉' */
+.icon-up-bold:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-down-bold:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-location:before {
+  content: '\e724';
+}
+
+/* '' */
+.icon-basket:before {
+  content: '\e73d';
+}
+
+/* '' */
+.icon-vimeo:before {
+  content: '\f306';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\f309';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\f30e';
+}
+
+/* '' */
+.icon-gplus:before {
+  content: '\f30f';
+}
+
+/* '' */
+.icon-pinterest:before {
+  content: '\f312';
+}
+
+/* '' */
+.icon-video:before {
+  content: '🎬';
+}
+
+/* '\1f3ac' */
+.icon-user:before {
+  content: '👤';
+}
+
+/* '\1f464' */
+.icon-monitor:before {
+  content: '💻';
+}
+
+/* '\1f4bb' */
+.icon-phone-1:before {
+  content: '📞';
+}
+
+/* '\1f4de' */
+.icon-arrows-ccw:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-search-1:before {
+  content: '🔍';
+}
+
+/* '\1f50d' */
 /*
  * jQuery Nivo Slider v3.0.1
  * http://nivo.dev7studios.com
@@ -571,7 +735,11 @@ body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   max-width: 990px;
   margin: 0 auto;
-  width: 100%;
+}
+@media screen and (min-width: 581px) and (max-width: 1030px) {
+  body {
+    padding: 0 10px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -680,28 +848,55 @@ hr {
   height: 1px;
 }
 
+a[name=footerNav] {
+  display: none !important;
+}
+
 /*   ===================================================================================================
      2. Header
 ======================================================================================================== */
-.header {
-  height: 180px;
+header.primary {
   margin-bottom: 1em;
   position: relative;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
+}
+
+@media screen and (max-width: 580px) {
+  #user-tools {
+    border-bottom: 1px solid black;
+  }
+}
+#user-tools a {
+  color: #333333;
 }
 
 .logo {
-  background: url('../images/logo.png?1380748623') top left no-repeat;
+  background-image: url('../images/logo.png?1380748623');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: block;
-  float: left;
   height: 140px;
-  margin-bottom: 0;
+  position: relative;
   width: 260px;
 }
-
-#user-tools a {
-  color: #333333;
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .logo {
+    background-image: url('../images/logo@2x.png?1382045253');
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    clear: both;
+    margin: 0.5em auto 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    float: left;
+    margin-bottom: 0;
+  }
 }
 
 /*   ===================================================================================================
@@ -709,52 +904,75 @@ hr {
 ======================================================================================================== */
 /* ----- a. Main Menu ----- */
 .mainMenu {
-  float: right;
   font-size: 13px;
-  height: 24px;
-  margin: 80px 0 30px;
   position: relative;
-  width: 640px;
   z-index: 101;
+}
+@media screen and (max-width: 767px) {
+  .mainMenu {
+    margin: 1em 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainMenu {
+    float: right;
+    height: 24px;
+    margin: 80px 0 30px;
+  }
 }
 .mainMenu ul {
   list-style: none;
   margin: 0;
-  float: right;
   padding: 0;
   position: relative;
 }
-.mainMenu li {
-  float: left;
-  margin: 0 0 0 55px;
-  padding: 0;
-  position: relative;
+@media screen and (max-width: 767px) {
+  .mainMenu ul {
+    text-align: center;
+  }
 }
-.mainMenu li a {
-  color: #333333;
-  display: inline-block;
-  height: 32px;
-  line-height: 32px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  text-decoration: none;
+@media screen and (min-width: 768px) {
+  .mainMenu ul {
+    text-align: right;
+  }
 }
-.mainMenu li a:hover {
-  color: black;
-  text-decoration: none;
-}
-.mainMenu li:hover ul {
-  border: 1px solid #ccc;
-  display: block;
-  font-size: 12px;
-}
-.mainMenu li ul {
+.mainMenu ul ul {
+  border: 1px solid #cccccc;
+  background: white;
   display: none;
+  font-size: 12px;
   left: -10px;
   position: absolute;
   top: 32px;
   width: 180px;
+}
+.mainMenu li {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .mainMenu li {
+    margin: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 819px) {
+  .mainMenu li {
+    margin: 0 0 0 35px;
+  }
+}
+@media screen and (min-width: 820px) {
+  .mainMenu li {
+    margin: 0 0 0 50px;
+  }
+}
+.mainMenu li:first-child {
+  margin-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .mainMenu li:hover ul {
+    display: block;
+  }
 }
 .mainMenu li li {
   display: block;
@@ -764,10 +982,8 @@ hr {
   width: 180px;
 }
 .mainMenu li li a {
-  background-color: #fff;
-  color: #666;
+  color: #575757;
   display: block;
-  float: none;
   height: 28px;
   line-height: 28px;
   margin: 0;
@@ -777,63 +993,117 @@ hr {
   width: 170px;
 }
 .mainMenu li li a:hover {
-  color: #000;
+  color: black;
+}
+.mainMenu a {
+  color: #333333;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .mainMenu a {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 0.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainMenu a {
+    height: 32px;
+    line-height: 32px;
+  }
+}
+.mainMenu a:hover {
+  color: black;
+  text-decoration: none;
 }
 .mainMenu .v65-pageAParent {
   color: black;
+}
+@media screen and (max-width: 919px) {
+  .mainMenu .v65-home {
+    display: none;
+  }
 }
 .mainMenu .v65-selected {
   color: black;
   font-weight: bold;
 }
+.mainMenu .footerMenuLink {
+  bottom: 0;
+  font-size: 1.5em;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 450px) {
+  .mainMenu .footerMenuLink {
+    display: block;
+  }
+}
+@media screen and (min-width: 451px) {
+  .mainMenu .footerMenuLink {
+    display: none;
+  }
+}
 
 /* ----- b. Sub Menu ----- */
 .subMenu {
-  border-right: 1px solid #ccc;
-  float: left;
-  margin: 60px 40px 0 0;
-  padding-right: 20px;
-  width: 170px;
+  margin-bottom: 0;
+  margin-top: 6%;
+}
+@media screen and (min-width: 768px) {
+  .subMenu {
+    border-right: 1px solid #cccccc;
+    float: left;
+    margin-right: 4%;
+    padding-right: 2%;
+    width: 17.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .subMenu h3 {
+    display: none;
+  }
 }
 .subMenu ul {
-  font-size: 11px;
   list-style: none;
-  margin: 0 0 1em 10px;
+  margin-bottom: 0;
   padding: 0;
-  width: 160px;
 }
 .subMenu li {
-  line-height: 2;
+  line-height: 3;
+}
+@media screen and (max-width: 767px) {
+  .subMenu li {
+    border-top: 1px solid #cccccc;
+    line-height: 44px;
+    text-align: center;
+  }
 }
 .subMenu li ul {
   margin-left: 10px;
-  width: 160px;
+}
+.subMenu a {
+  display: inline-block;
+  line-height: 1.5;
+  width: 100%;
 }
 .subMenu .v65-pageAParent {
-  color: #000;
+  color: black;
 }
 .subMenu .v65-leftSelected {
-  color: #000;
+  color: black;
   font-weight: bold;
 }
 
 /*   ===================================================================================================
      4. Content
 ======================================================================================================== */
-.hideText {
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-.hideText a {
-  display: block;
-  height: 100%;
-}
-
-.wrapper {
-  margin: 0 auto;
-  position: relative;
-  width: 950px;
+#v65-modalContentHeader {
+  background: #333333;
 }
 
 .content {
@@ -841,70 +1111,192 @@ hr {
   box-shadow: 0 0 20px #999999;
 }
 
+@media screen and (max-width: 767px) {
+  .pageContent {
+    padding: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pageContent {
+    padding: 3em;
+  }
+}
+
 /* ----- a. Homepage Styles ----- */
 .homepageContent {
   background: #fff;
-  box-shadow: 0 0 20px #999999;
+  box-shadow: 0 0 2em #999999;
 }
 
 .homepageText {
-  float: left;
-  margin-bottom: 20px;
-  padding: 0 30px 30px 20px;
-  width: 470px;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 700px) {
+  .homepageText {
+    padding: 0 4%;
+  }
+}
+@media screen and (min-width: 701px) {
+  .homepageText {
+    float: left;
+    padding: 0 4% 4%;
+    width: 52%;
+  }
 }
 
 .homepageProductGroup {
+  margin: 0 0 2em;
+}
+@media screen and (max-width: 700px) {
+  .homepageProductGroup {
+    padding: 0 4%;
+  }
+}
+@media screen and (min-width: 701px) {
+  .homepageProductGroup {
+    float: left;
+    padding: 0 4% 4% 0;
+    width: 36%;
+  }
+}
+.homepageProductGroup .v65-productGroup-products {
+  text-align: left;
+  width: 100%;
+}
+.homepageProductGroup .v65-productGroup-title {
+  color: #333333;
+  font-family: Georgia, serif;
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0.25em  0 0.5em;
+}
+.homepageProductGroup .v65-productGroup-teaser {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+.homepageProductGroup .v65-productGroup-product {
+  margin: 0 0 1em;
+  width: 100%;
+}
+.homepageProductGroup .v65-product-photo {
   float: left;
-  margin: 0 0 20px;
-  padding: 0 0 30px 20px;
-  width: 400px;
+  width: auto;
 }
 
 #slider {
+  height: 0;
+  padding-top: 35%;
   overflow: hidden;
   width: 100%;
 }
+#slider .nivo-main-image {
+  position: absolute !important;
+}
 
 /* ----- b. Page Styles ----- */
-.pageContent {
-  float: left;
-  width: 650px;
+.backToTop {
+  background: #333333;
+  bottom: 1em;
+  color: white;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  display: none;
+  height: 5em;
+  line-height: 5em;
+  opacity: 0.6;
+  position: fixed;
+  right: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 5em;
+  z-index: 1000;
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    float: right;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 581px) {
+  .col2 {
+    float: left;
+    margin-right: 4%;
+    width: 48%;
+  }
+}
+.col2 + .col2 {
+  margin-right: 0;
+}
+
+.v65-featureRight, .v65-right,
+.v65-featureLeft, .v65-left,
+.v65-border {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ----- c. Store Styles ----- */
+@media screen and (max-width: 725px) {
+  #v65-fieldset-wholesalerInfo, #v65-fieldset-billingInfo,
+  #v65-fieldset-shippingOptions, #v65-fieldset-shippingInfo,
+  #v65-fieldset-paymentMethod, #v65-fieldset-sourceCode,
+  #v65-fieldset-usernamePassword {
+    width: 98%;
+  }
 }
 
 /*   ===================================================================================================
      5. Blog
 ======================================================================================================== */
-.blogContent {
-  float: left;
-  padding: 20px 25px 0 0;
-  width: 520px;
+@media screen and (min-width: 581px) {
+  .blogContent {
+    float: left;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .blogContent {
+    padding: 4% 4% 0 0;
+    width: 56%;
+  }
 }
 
-.blogRightWrapper {
-  float: right;
-  padding-top: 20px;
-  width: 325px;
+@media screen and (min-width: 581px) {
+  .blogFilterWrapper {
+    float: right;
+    width: 20%;
+  }
 }
-.blogRightWrapper ul {
+@media screen and (min-width: 768px) {
+  .blogFilterWrapper {
+    padding-top: 4%;
+    width: 40%;
+  }
+}
+.blogFilterWrapper ul {
   list-style: none;
-  margin: 0 0 1em;
   padding: 0;
 }
-.blogRightWrapper li {
+.blogFilterWrapper li {
   font-size: 11px;
   margin: 0 0 0 10px;
 }
 
-.blogFilterLeft {
-  float: left;
-  padding: 0 25px 0 0;
-  width: 150px;
+@media screen and (max-width: 580px), (min-width: 768px) {
+  .blogFilter {
+    float: left;
+    width: 48%;
+  }
 }
 
-.blogFilterRight {
-  float: left;
-  width: 150px;
+@media screen and (max-width: 580px), (min-width: 768px) {
+  .blogFilterLeft {
+    padding-right: 4%;
+  }
 }
 
 /*   ===================================================================================================
@@ -930,6 +1322,8 @@ button.defaultBtn, button.modalBtn, button.largeBtn {
 }
 button.defaultBtn span, button.modalBtn span, button.largeBtn span {
   background: none;
+  height: auto;
+  line-height: inherit;
 }
 button.defaultBtn:hover, button.defaultBtn:active, button.modalBtn:hover, button.modalBtn:active, button.largeBtn:hover, button.largeBtn:active {
   background-color: #4280be;
@@ -957,6 +1351,8 @@ button.altBtn, button.altModalBtn, button.altLargeBtn {
 }
 button.altBtn span, button.altModalBtn span, button.altLargeBtn span {
   background: none;
+  height: auto;
+  line-height: inherit;
 }
 button.altBtn:hover, button.altBtn:active, button.altModalBtn:hover, button.altModalBtn:active, button.altLargeBtn:hover, button.altLargeBtn:active {
   background-color: #646464;
@@ -970,6 +1366,8 @@ button.altBtn:hover, button.altBtn:active, button.altModalBtn:hover, button.altM
 
 a span {
   padding: 0 1em;
+  height: auto;
+  line-height: inherit;
 }
 a.linkBtn, a.modalLinkBtn, a.largeLinkBtn, a.fullWidthBtn {
   background-color: #3b73ac;
@@ -988,6 +1386,8 @@ a.linkBtn, a.modalLinkBtn, a.largeLinkBtn, a.fullWidthBtn {
 }
 a.linkBtn span, a.modalLinkBtn span, a.largeLinkBtn span, a.fullWidthBtn span {
   background: none;
+  height: auto;
+  line-height: inherit;
 }
 a.linkBtn:hover, a.linkBtn:active, a.modalLinkBtn:hover, a.modalLinkBtn:active, a.largeLinkBtn:hover, a.largeLinkBtn:active, a.fullWidthBtn:hover, a.fullWidthBtn:active {
   background-color: #4280be;
@@ -1015,6 +1415,8 @@ a.linkAltBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
 }
 a.linkAltBtn span, a.modalLinkAltBtn span, a.modalLinkAltBtn span {
   background: none;
+  height: auto;
+  line-height: inherit;
 }
 a.linkAltBtn:hover, a.linkAltBtn:active, a.modalLinkAltBtn:hover, a.modalLinkAltBtn:active, a.modalLinkAltBtn:hover, a.modalLinkAltBtn:active {
   background-color: #646464;
@@ -1039,12 +1441,27 @@ footer {
   width: 100%;
 }
 footer ul {
-  margin: 0;
+  list-style: none;
+  margin: 0 1em;
   padding: 0;
 }
-footer li {
-  display: inline;
-  padding: 0 5px;
+@media screen and (min-width: 768px) {
+  footer ul {
+    margin-bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer li {
+    border-top: 1px solid #cccccc;
+    line-height: 44px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer li {
+    display: inline;
+    padding: 0 5px;
+  }
 }
 footer li a {
   color: #333333;
@@ -1052,70 +1469,23 @@ footer li a {
   font-size: 0.917em;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  footer li a {
+    width: 100%;
+  }
+}
 footer li a:hover {
   color: black;
 }
-footer .accolade {
+footer .phone a:hover, footer .email a:hover, footer .map a:hover {
+  text-decoration: none;
+}
+footer .legal {
   font-size: 0.917em;
+}
+footer .legal li {
+  display: block;
 }
 footer a {
   color: #333333;
-}
-
-/*   ===================================================================================================
-     9. Vin65 Overrides
-======================================================================================================== */
-#v65-modalContentHeader {
-  background: #333333;
-}
-
-/* ----- b. Homepage Product Group ----- */
-.homepageProductGroup .v65-productGroup-products {
-  text-align: left;
-  width: 100%;
-}
-
-.homepageProductGroup .v65-productGroup-title {
-  color: #333333;
-  font-family: Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
-  margin: 0.25em  0 0.5em;
-}
-
-.homepageProductGroup .v65-productGroup-teaser {
-  float: none;
-  margin: 0;
-  width: 100%;
-}
-
-.homepageProductGroup .v65-productGroup-product {
-  margin: 0 0 1em;
-  width: 100%;
-}
-
-.homepageProductGroup .v65-product-photo {
-  float: left;
-  width: auto;
-}
-
-.homepageProductGroup .v65-productGroup-product .v65-product-addToCart-priceWrapper {
-  display: inline;
-}
-
-/* ----- c. Checkout Overrides ----- */
-#v65-fieldset-paymentMethod {
-  float: left;
-  width: 400px;
-}
-
-form#v65-checkBilling .v65-additionalComments {
-  float: none;
-  margin-left: 10px;
-  padding: 15px 0 0;
-  width: 390px;
-}
-
-#v65-signUpClubSummaryWrapper {
-  margin-bottom: 20px;
 }
