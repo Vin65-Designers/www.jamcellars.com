@@ -1,15 +1,27 @@
-$backgroundColor: #000000; // Website Background Color
-$boxShadowColor: #000000; // Box Shadow Color
-$websiteWidth: 950px;
+// Colors
+$grey: #575757;
+$grey-light: #ccc;
+$grey-dark: #333;
+$black: #000;
+$white: #fff;
+$offWhite: #f1f1f1;
 
-$fontColor: #666; // General Font Color
-$fontFamily: "Lucida Sans Unicode", "Lucida Grande", sans-serif; // Default Font Family
+$backgroundColor: $black;
+$headingFontColor: $grey-dark; // Default Heading Font Color
+$headerFontColor: $white; //Font Color outside the container
+$headerFontColorHover: $grey-light; // Hover font color outside the container
 
-$headingFontFamily: "Times New Roman", Times, serif; // Default Heading Font Family
-$headingFontColor: #333; // Default Heading Font Color
+$navLinkColor: $black; //Font Color for main navigation
+$subNavLinkColor: $black; //Font Color for sub navigation
 
-$headerFontColor: #fff; //Font Color outside the container
-$headerFontColorHover: #ccc; // Hover font color outside the container
+$homepageContentColor: $white; // Homepage content background color
+$contentBackgroundColor: $white; //Content background color
 
-$footerFontColor: #fff; //Font Color outside the container
-$footerFontColorHover: #ccc; // Hover font color outside the container
+$footerColor: $white; //Footer Color
+$footerLink: $white; // Footer Link
+$footerLinkHover: $grey-light; // Footer Link Hover
+
+$footerFontColor: $grey-dark; //Font Color outside the container
+$footerFontColorHover: $white; // Hover font color outside the container
+
+$boxShadowColor: #999; // Box Shadow Color
