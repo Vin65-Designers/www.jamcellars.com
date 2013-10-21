@@ -25,6 +25,11 @@ button {
 		}
 	}
 
+	&.modalBtn, &.altModalBtn{
+		height: 2.5em;
+		line-height: inherit;
+	}
+
 	&.altBtn, &.altModalBtn, &.altLargeBtn{
 		@include gradient($grey, $grey-dark);
 		border: 1px solid $grey;
@@ -55,7 +60,7 @@ a{
 		line-height: inherit;
 	}
 	
-	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn, &.fullWidthBtn{
+	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn{
 		@include gradient($blue-light, $blue-dark);
 		border: 1px solid $blue-light;
 		border-radius: 3px;

@@ -27,6 +27,7 @@
 	page : {
 		init : function(){
 			v65.page.initPhotoGallery();
+			v65.page.productGroupRowClear();
 			v65.page.scrollToBottom();
 			v65.page.scrollToTop();
 		},
@@ -44,6 +45,17 @@
 						directionNav : false // hide the arrow navigation
 					*/
 				});
+			}
+		},
+		productGroupRowClear : function(){
+			if($(".v65-productGroup").length){
+				for(var i = 1; i <= $(".v65-productGroup-product").length; i++){
+					if(i % 2 === 0){
+						$(".v65-productGroup-product").eq(i).before('<div class="v65-clear productGroup-2Up-rowClear"></div>');
+					} else if (i % 3 === 0){
+						$(".v65-productGroup-product").eq(i).before('<div class="v65-clear productGroup-3Up-rowClear"></div>');
+					}
+				}
 			}
 		},
 		scrollToBottom : function(){
