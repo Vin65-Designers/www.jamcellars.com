@@ -7,7 +7,7 @@ body{
 	color: $fontColor;
 	font-family: $fontFamily;
 	max-width: 990px;
-	margin: 0 auto;
+	margin: 0 0 0 50px;
 
 	@media screen and (min-width: 581px) and (max-width: 1030px){
 		padding: 0 10px;

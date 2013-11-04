@@ -398,16 +398,16 @@ table {
 
 @font-face {
   font-family: 'franchiseregular';
-  src: url("../fonts/franchise-bold-webfont.eot");
-  src: url("../fonts/franchise-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/franchise-bold-webfont.woff") format("woff"), url("../fonts/franchise-bold-webfont.ttf") format("truetype"), url("../fonts/franchise-bold-webfont.svg#franchiseregular") format("svg");
+  src: url("/assets/fonts/franchise/franchise-bold-webfont.eot");
+  src: url("/assets/fonts/franchise/franchise-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/franchise/franchise-bold-webfont.woff") format("woff"), url("/assets/fonts/franchise/franchise-bold-webfont.ttf") format("truetype"), url("/assets/fonts/franchise/franchise-bold-webfont.svg#franchiseregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url("../fonts/fontello.eot?96886464");
-  src: url("../fonts/fontello.eot?96886464#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?96886464") format("woff"), url("../fonts/fontello.ttf?96886464") format("truetype"), url("../fonts/fontello.svg?96886464#fontello") format("svg");
+  src: url("/assets/fonts/fontello/fontello.eot?96886464");
+  src: url("/assets/fonts/fontello/fontello.eot?96886464#iefix") format("embedded-opentype"), url("/assets/fonts/fontello/fontello.woff?96886464") format("woff"), url("/assets/fonts/fontello/fontello.ttf?96886464") format("truetype"), url("/assets/fonts/fontello/fontello.svg?96886464#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -447,131 +447,166 @@ table {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-youtube:before {
-  content: '\55';
-}
-
-/* 'U' */
-.icon-acrobat:before {
-  content: '\e3';
-}
-
-/* 'ã' */
-.icon-home:before {
-  content: '\2302';
-}
-
-/* '⌂' */
-.icon-star:before {
-  content: '\2605';
-}
-
-/* '★' */
-.icon-star-empty:before {
-  content: '\2606';
-}
-
-/* '☆' */
-.icon-menu:before {
-  content: '\2630';
-}
-
-/* '☰' */
-.icon-heart-empty:before {
-  content: '\2661';
-}
-
-/* '♡' */
-.icon-heart:before {
-  content: '\2665';
-}
-
-/* '♥' */
-.icon-layout:before {
-  content: '\268f';
-}
-
-/* '⚏' */
 .icon-mail:before {
-  content: '\2709';
+  content: '\e81c';
 }
 
-/* '✉' */
-.icon-up-bold:before {
+/* '' */
+.icon-acrobat:before {
+  content: '\e813';
+}
+
+/* '' */
+.icon-heart:before {
+  content: '\e81a';
+}
+
+/* '' */
+.icon-heart-empty:before {
+  content: '\e81b';
+}
+
+/* '' */
+.icon-star:before {
+  content: '\e815';
+}
+
+/* '' */
+.icon-star-empty:before {
+  content: '\e816';
+}
+
+/* '' */
+.icon-star-half:before {
+  content: '\e817';
+}
+
+/* '' */
+.icon-star-half-alt:before {
+  content: '\e818';
+}
+
+/* '' */
+.icon-home:before {
+  content: '\e814';
+}
+
+/* '' */
+.icon-location:before {
+  content: '\e81e';
+}
+
+/* '' */
+.icon-direction:before {
+  content: '\e81f';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\e819';
+}
+
+/* '' */
+.icon-basket:before {
   content: '\e800';
 }
 
 /* '' */
-.icon-down-bold:before {
-  content: '\e801';
-}
-
-/* '' */
-.icon-location:before {
-  content: '\e724';
-}
-
-/* '' */
-.icon-basket:before {
-  content: '\e73d';
-}
-
-/* '' */
-.icon-vimeo:before {
-  content: '\f306';
-}
-
-/* '' */
-.icon-twitter:before {
-  content: '\f309';
-}
-
-/* '' */
 .icon-facebook:before {
-  content: '\f30e';
+  content: '\e812';
 }
 
-/* '' */
+/* '' */
+.icon-facebook-squared:before {
+  content: '\e811';
+}
+
+/* '' */
+.icon-flickr:before {
+  content: '\e810';
+}
+
+/* '' */
+.icon-mail-alt:before {
+  content: '\e81d';
+}
+
+/* '' */
+.icon-gplus-squared:before {
+  content: '\e80e';
+}
+
+/* '' */
 .icon-gplus:before {
-  content: '\f30f';
+  content: '\e80d';
 }
 
-/* '' */
-.icon-pinterest:before {
-  content: '\f312';
+/* '' */
+.icon-instagramm:before {
+  content: '\e80c';
 }
 
-/* '' */
-.icon-video:before {
-  content: '🎬';
+/* '' */
+.icon-linkedin-squared:before {
+  content: '\e80b';
 }
 
-/* '\1f3ac' */
-.icon-user:before {
-  content: '👤';
+/* '' */
+.icon-linkedin:before {
+  content: '\e80a';
 }
 
-/* '\1f464' */
-.icon-monitor:before {
-  content: '💻';
+/* '' */
+.icon-pinterest-circled:before {
+  content: '\e809';
 }
 
-/* '\1f4bb' */
-.icon-phone-1:before {
-  content: '📞';
+/* '' */
+.icon-pinterest-squared:before {
+  content: '\e808';
 }
 
-/* '\1f4de' */
-.icon-arrows-ccw:before {
+/* '' */
+.icon-tumblr:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-tumblr-squared:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-twitter-squared:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-youtube:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-youtube-squared:before {
   content: '\e802';
 }
 
 /* '' */
-.icon-search-1:before {
-  content: '🔍';
+.icon-youtube-play:before {
+  content: '\e801';
 }
 
-/* '\1f50d' */
+/* '' */
+.icon-foursquare:before {
+  content: '\e80f';
+}
+
+/* '' */
 /*
  * jQuery Nivo Slider v3.0.1
  * http://nivo.dev7studios.com
@@ -738,11 +773,11 @@ html {
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: black;
   color: #111111;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   max-width: 990px;
-  margin: 0 auto;
+  margin: 0 0 0 50px;
 }
 @media screen and (min-width: 581px) and (max-width: 1030px) {
   body {
@@ -863,11 +898,8 @@ a[name=footerNav] {
 /*   ===================================================================================================
      2. Header
 ======================================================================================================== */
-header.primary {
-  margin-bottom: 1em;
-  position: relative;
+.userTools {
   width: 100%;
-  z-index: 10;
 }
 
 @media screen and (max-width: 580px) {
@@ -879,31 +911,28 @@ header.primary {
   color: #333333;
 }
 
+header.primary {
+  background: white;
+  float: left;
+  position: relative;
+  width: 24%;
+  z-index: 10;
+}
+
 .logo {
-  background-image: url('../images/logo.png?1383160028');
+  background-image: url('../images/logo.jpg?1383587288');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 140px;
+  height: 300px;
+  margin: 20px auto;
   position: relative;
-  width: 260px;
+  width: 150px;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .logo {
-    background-image: url('../images/logo@2x.png?1383160028');
-  }
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    clear: both;
-    margin: 0.5em auto 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    float: left;
-    margin-bottom: 0;
+    background-image: url('../images/logo@2x.jpg');
   }
 }
 
@@ -912,7 +941,9 @@ header.primary {
 ======================================================================================================== */
 /* ----- a. Main Menu ----- */
 .mainMenu {
-  font-size: 13px;
+  font-family: "franchiseregular", sans-serif;
+  font-size: 18px;
+  padding: 10px;
   position: relative;
   z-index: 101;
 }
@@ -921,61 +952,25 @@ header.primary {
     margin: 1em 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .mainMenu {
-    float: right;
-    height: 24px;
-    margin: 80px 0 30px;
-  }
-}
 .mainMenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
 }
-@media screen and (max-width: 767px) {
-  .mainMenu ul {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mainMenu ul {
-    text-align: right;
-  }
-}
 .mainMenu ul ul {
   border: 1px solid #cccccc;
   background: white;
   display: none;
-  font-size: 12px;
-  left: -10px;
+  left: 100%;
   position: absolute;
-  top: 32px;
+  top: 0;
   width: 180px;
 }
 .mainMenu li {
-  display: inline-block;
+  border-bottom: 1px solid #cccccc;
   padding: 0;
   position: relative;
-}
-@media screen and (max-width: 767px) {
-  .mainMenu li {
-    margin: 0 10px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 819px) {
-  .mainMenu li {
-    margin: 0 0 0 35px;
-  }
-}
-@media screen and (min-width: 820px) {
-  .mainMenu li {
-    margin: 0 0 0 50px;
-  }
-}
-.mainMenu li:first-child {
-  margin-left: 0;
 }
 @media screen and (min-width: 768px) {
   .mainMenu li:hover ul {
@@ -992,8 +987,6 @@ header.primary {
 .mainMenu li li a {
   color: #575757;
   display: block;
-  height: 28px;
-  line-height: 28px;
   margin: 0;
   padding: 0 0 0 10px;
   text-align: left;
@@ -1002,30 +995,26 @@ header.primary {
 }
 .mainMenu li li a:hover {
   color: black;
+  padding-left: 25px;
 }
 .mainMenu a {
   color: #333333;
-  display: inline-block;
+  display: block;
+  height: 2.5em;
+  line-height: 2.5em;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   position: relative;
   text-decoration: none;
+  -webkit-transition: padding 0.2s ease-in-out;
+  -moz-transition: padding 0.2s ease-in-out;
+  -ms-transition: padding 0.2s ease-in-out;
+  -o-transition: padding 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out;
 }
-@media screen and (max-width: 767px) {
-  .mainMenu a {
-    height: 44px;
-    line-height: 44px;
-    padding: 0 0.5em;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mainMenu a {
-    height: 32px;
-    line-height: 32px;
-  }
-}
-.mainMenu a:hover {
+.mainMenu a:hover, .mainMenu a.hover {
   color: black;
+  padding-left: 30px;
   text-decoration: none;
 }
 .mainMenu .v65-pageAParent {
@@ -1115,25 +1104,17 @@ header.primary {
 }
 
 .content {
-  background: #fff;
-  box-shadow: 0 0 20px #999999;
-}
-
-@media screen and (max-width: 767px) {
-  .pageContent {
-    padding: 1em;
-  }
-}
-@media screen and (min-width: 768px) {
-  .pageContent {
-    padding: 3em;
-  }
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  float: left;
+  margin-left: 4%;
+  padding: 2%;
+  width: 68%;
 }
 
 /* ----- a. Homepage Styles ----- */
 .homepageContent {
   background: #fff;
-  box-shadow: 0 0 2em #999999;
 }
 
 .homepageText {

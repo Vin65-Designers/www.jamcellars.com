@@ -1,8 +1,5 @@
-header.primary{
-	margin-bottom: 1em;
-	position: relative;
+.userTools{
 	width: 100%;
-	z-index: 10;
 }
 
 	#user-tools {
@@ -15,29 +12,28 @@ header.primary{
 		}
 	}
 
+header.primary{
+	background: $white;
+	float: left;
+	position: relative;
+	width: 24%;
+	z-index: 10;
+}
+
 	.logo{
 		background:{
 			image: image-url($logo);
 			position: top center;
 			repeat: no-repeat;
+			size: contain;
 		}
-		background-size: contain;
 		display: block;
-		height: 140px;
+		height: 300px;
+		margin: 20px auto;
 		position: relative;
-		width: 260px;
+		width: 150px;
 
 		@media screen and (-webkit-min-device-pixel-ratio: 1.5),	(min-device-pixel-ratio: 1.5){
 			background-image: image-url($logo-retina);
-		}
-		
-		@media screen and (max-width: 767px){
-			clear: both;
-			margin: 0.5em auto 0;
-		}
-
-		@media screen and (min-width: 768px){
-			float: left;
-			margin-bottom: 0;
 		}
 	}

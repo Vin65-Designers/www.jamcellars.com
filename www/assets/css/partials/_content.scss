@@ -3,18 +3,22 @@
 }
 
 .content{
-	background: #fff;
-	box-shadow: 0 0 20px $boxShadowColor;
+	background: $white;
+	background: rgba($white,0.9);
+	float: left;
+	margin-left: 4%;
+	padding: 2%;
+	width: 68%;
 }
 
 	.pageContent{
-		@media screen and (max-width: 767px){
-			padding: 1em;
-		}
+		// @media screen and (max-width: 767px){
+		// 	padding: 1em;
+		// }
 		
-		@media screen and (min-width: 768px){
-			padding: 3em;
-		}
+		// @media screen and (min-width: 768px){
+		// 	padding: 3em;
+		// }
 	}
 
 /* ----- a. Homepage Styles ----- */

@@ -10,7 +10,7 @@ $blue-light: #3b73ac;
 $blue-dark: #2e5b87;
 $offBlack: #111;
 
-$backgroundColor: $offWhite;
+$backgroundColor: $black;
 $headingFontColor: $grey-dark; // Default Heading Font Color
 $headerFontColor: $grey-dark; //Font Color outside the container
 $headerFontColorHover: $black; // Hover font color outside the container
@@ -28,10 +28,10 @@ $footerLinkHover: $white; // Footer Link Hover
 $footerFontColor: $grey-dark; //Font Color outside the container
 $footerFontColorHover: $black; // Hover font color outside the container
 
-$boxShadowColor: #999; // Box Shadow Color
+$logo: 'logo.jpg';
+$logo-retina: 'logo@2x.jpg';
 
-$logo: 'logo.png';
-$logo-retina: 'logo@2x.png';
+$franchise: "franchiseregular", sans-serif;
 
 $georgia: Georgia, serif;
 $lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
